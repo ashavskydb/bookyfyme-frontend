@@ -1,36 +1,56 @@
-.dashboard-container {
-    display: flex;
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px; /* добавьте отступ, чтобы не прилегало к навигационному бару */
-  }
-  
-  .calendar-section {
-    width: 70%;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-right: 10px; /* отступ между календарем и виджетами */
-    margin-bottom: 20px;
-  }
-  
-  .widgets-section {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .widget {
-    padding: 20px;
-    background-color: #070606;
-    box-shadow: 0 0 10px rgba(113, 221, 160, 0.479);
-  }
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
 
-  .h1 {
-    font-size: 30px;
-    font-style: italic;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.352);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #63437dad;
+}
+
+.dashboard h1 {
+  margin-bottom: 20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 20px;
+}
+
+.widget {
+  background-color: rgba(255, 255, 255, 0.196);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.widget:hover {
+  transform: translateY(-5px);
+}
+
+.widget h2 {
+  margin-bottom: 10px;
+}
+
+.widget a {
+  color: #007bff79;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.widget a:hover {
+  text-decoration: underline;
+}

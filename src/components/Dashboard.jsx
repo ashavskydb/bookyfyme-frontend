@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Calendar from "./Calendar";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Calendar from './Calendar';
+
 
 const Dashboard = () => {
   return (
     <div className="main-content">
       <div className="dashboard">
-        <h1>Welcome to BookyfyMe</h1>
         <Calendar />
       </div>
       <div className="sidebar">

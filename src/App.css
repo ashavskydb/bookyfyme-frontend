@@ -1,59 +1,41 @@
-/* General styles */
+
+body {
+  font-family: 'Arial, sans-serif';
+  margin: 0;
+  padding: 0;
+  background: url('https://watermark.lovepik.com/photo/20211118/large/lovepik-map-background-of-travel-plan-picture_500134336.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  background: rgba(255, 255, 255, 0.8); 
+  border-radius: 8px;
 }
 
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .main-content {
   display: flex;
-  flex-direction: row;
+  flex: 1;
   margin-top: 20px;
 }
 
-/* Navbar styles */
-nav {
-  width: 100%;
-  background-color: #007bff;
-  padding: 1rem;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: block;
-}
-
-nav ul li a:hover {
-  background-color: #0056b3;
-  border-radius: 5px;
-}
-
-/* Dashboard styles */
 .dashboard {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 70%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .dashboard h1 {
@@ -70,25 +52,46 @@ nav ul li a:hover {
 }
 
 .dashboard nav ul li a {
-  color: #007bff;
+  color: #4c7bad6c;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .dashboard nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Sidebar styles */
 .sidebar {
   display: flex;
   flex-direction: column;
   width: 30%;
+  margin-left: 20px;
 }
 
 .widget {
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.widget:hover {
+  transform: translateY(-5px);
+}
+
+.widget h2 {
+  margin-bottom: 10px;
+}
+
+.widget a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.widget a:hover {
+  text-decoration: underline;
 }

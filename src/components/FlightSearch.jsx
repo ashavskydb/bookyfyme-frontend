@@ -4,14 +4,14 @@ import flightService from '../services/flightService';
 const FlightSearch = () => {
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
+  const [departureDate, setDepartureDate] = useState('');
+  const [returnDate, setReturnDate] = useState('');
   const [flights, setFlights] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = await flightService.searchFlights(origin, destination, startDate, endDate);
+      const result = await flightService.searchFlights(origin, destination, departureDate, returnDate);
       setFlights(result);
     } catch (error) {
       console.error('Flight search failed', error);
@@ -30,12 +30,12 @@ const FlightSearch = () => {
         <input type="text" value={destination} onChange={(e) => setDestination(e.target.value)} required />
       </label>
       <label>
-        Start Date:
-        <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} required />
+        Departure Date:
+        <input type="date" value={departureDate} onChange={(e) => setDepartureDate(e.target.value)} required />
       </label>
       <label>
-        End Date:
-        <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} required />
+        Return Date:
+        <input type="date" value={returnDate} onChange={(e) => setReturnDate(e.target.value)} />
       </label>
       <button type="submit">Search</button>
       <ul>

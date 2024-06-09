@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-const API_URL = `${import.meta.env.VITE_API_URL}/bandsintown`;
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/bandsintown';
 
-const searchEvents = async (city, date) => {
-  const response = await axios.post(`${API_URL}/search`, { city, date });
-  return response.data.events;
+const searchEvents = async (artist, region) => {
+  const response = await axios.post(`${API_URL}/search`, { artist, region });
+  return response.data;
 };
 
-const eventService = {
+const eventsService = {
   searchEvents
 };
 
-export default eventService;
+export default eventsService;

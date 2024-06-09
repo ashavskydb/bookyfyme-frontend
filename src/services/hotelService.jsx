@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const API_URL = `${import.meta.env.VITE_API_URL}/accommodations`;
+const API_URL = `http://localhost:5000/api/accommodations`;
 
 const searchHotels = async (city, checkInDate, checkOutDate) => {
-  const response = await axios.post(`${API_URL}/search`, { city, checkInDate, checkOutDate });
+  const response = await axios.get(API_URL, { city, checkInDate, checkOutDate });
   return response.data.accommodations;
 };
 

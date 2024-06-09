@@ -52,7 +52,7 @@ const Calendar = () => {
         events={events}
         startAccessor="start"
         endAccessor="end"
-        style={{ height: 500, width: 700 }}
+        style={{ height: '300%', width: '150%' }}
         selectable
         onSelectSlot={handleSelectSlot}
       />
