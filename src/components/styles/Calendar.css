@@ -1,0 +1,26 @@
+.calendar-widget {
+    background-color: #894c4c;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-widget h2 {
+    margin-bottom: 20px;
+  }
+  
+  .calendar-widget ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .calendar-widget ul li {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .calendar-widget ul li:last-child {
+    border-bottom: none;
+  }
+  
