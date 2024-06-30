@@ -1,14 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Dashboard from './components/Dashboard';
-import FlightSearch from './components/FlightSearch';
-import HotelSearch from './components/HotelSearch';
-import EventSearch from './components/EventsSearch';
-import Calendar from './components/Calendar';
-import LoginRegister from './components/LoginRegister';
-import { AuthProvider } from './contexts/AuthContext';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Dashboard from "./components/Dashboard/Dashboard";
+import FlightSearch from "./components/FlightSearch/FlightSearch";
+import HotelSearch from "./components/HotelSearch/HotelSearch";
+import EventSearch from "./components/EventSearch/EventsSearch";
+import Calendar from "./components/Calendar/Calendar";
+import LoginRegister from "./components/LoginRegister/LoginRegister";
+import { AuthProvider } from "./contexts/AuthContext";
+import "./App.css";
 
 function App() {
   return (
@@ -24,7 +24,10 @@ function App() {
               <Route path="/events" element={<EventSearch />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/login" element={<LoginRegister page="Login" />} />
-              <Route path="/register" element={<LoginRegister page="Register" />} />
+              <Route
+                path="/register"
+                element={<LoginRegister page="Register" />}
+              />
             </Routes>
           </div>
         </div>

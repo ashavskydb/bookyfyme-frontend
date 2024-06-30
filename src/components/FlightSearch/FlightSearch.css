@@ -1,0 +1,135 @@
+.flight-search-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.search-title {
+  text-align: center;
+  color: #4caf50;
+  font-size:60px;
+  font-style: bold;
+}
+
+.flight-search-container {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    
+  }
+  
+  .flight-search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #000000bd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 3600px;
+    height: 750px;
+    
+  }
+  
+  .flight-search-form h2 {
+    color: #e5e9e5; 
+    margin-bottom: 20px;
+  }
+  
+  .flight-search-form label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #fdf9f9;
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .flight-search-form input[type="text"],
+  .flight-search-form input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+  
+  .btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 50px;
+    transition: all 0.2s;
+    position: relative;
+    color: #ffffff;
+    background-color: #4caf50; 
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    background-color: #4caf50;
+  }
+  
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+  
+  .btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+  }
+  
+  @keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  .flight-results {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .flight-results li {
+    background-color: #a5d6a7; 
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #333;
+  }
+  

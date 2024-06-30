@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Calendar from './Calendar';
+import Calendar from "../Calendar/Calendar.jsx";
+import './Dashboard.css';
+
 
 
 const Dashboard = () => {

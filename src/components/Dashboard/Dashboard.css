@@ -1,23 +1,20 @@
 .mainContent {
   display: flex;
   flex-direction: row;
+  flex: 1;
   margin-top: 20px;
 }
 
 .dashboard {
   display: flex;
   flex-direction: column;
-  align-items: flex;
+  align-items: flex-start;
   width: 70%;
   background-color: rgba(255, 255, 255, 0.352);
-  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: #63437dad;
-}
-
-.dashboard h1 {
-  margin-bottom: 20px;
+  height: 730px;
 }
 
 .sidebar {
@@ -32,10 +29,12 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  flex-grow: 1;
+  margin-bottom: 20px;
 }
+
 
 .widget:hover {
   transform: translateY(-5px);
