@@ -13,7 +13,7 @@ const EventSearch = () => {
       const result = await eventService.searchEvents(city, date);
       setEvents(result);
     } catch (error) {
-      console.error('Event search failed', error);
+      // console.error('Event search failed', error);
     }
   };
 

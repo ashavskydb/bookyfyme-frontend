@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .search-title {
@@ -11,11 +11,13 @@
   color: #4caf50;
   font-size:60px;
   font-style: bold;
+  margin-bottom: 20px;
 }
 
 .flight-search-container {
     display: flex;
     align-items: center;
+    flex-direction: column;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -31,8 +33,9 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 3600px;
-    height: 750px;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
     
   }
   
@@ -124,12 +127,14 @@
   }
   
   .flight-results li {
-    background-color: #a5d6a7; 
+    background-color: #282e283b;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 10px;
     font-size: 1em;
-    color: #333;
+    color: #1d1f1f;
+    width: 100%;
+    border-color: #1d1f1f;
   }
   
