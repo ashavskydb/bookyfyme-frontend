@@ -24,12 +24,12 @@ const HotelSearch = () => {
         city,
         checkInDate,
         checkOutDate,
-        token
+        token,
       );
       setHotels(result);
       setError(null);
     } catch (error) {
-      console.error("Hotel search failed", error.message);
+      // console.error("Hotel search failed", error.message);
       setError(error.message);
     }
   };

@@ -10,7 +10,7 @@ const EventSearch = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = await eventService.searchEvents(city, date);
+      const result = await eventService.searchEvents(city, date); //проблема тут 
       setEvents(result);
     } catch (error) {
       // console.error('Event search failed', error);
