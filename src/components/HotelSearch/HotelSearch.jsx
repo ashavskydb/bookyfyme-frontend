@@ -5,7 +5,6 @@ import { AuthContext } from "../../contexts/AuthContext";
 
 const HotelSearch = () => {
   const { token } = useContext(AuthContext);
-
   const [city, setCity] = useState("");
   const [checkInDate, setCheckInDate] = useState("");
   const [checkOutDate, setCheckOutDate] = useState("");
@@ -18,6 +17,9 @@ const HotelSearch = () => {
     try {
       if (!city || !checkInDate || !checkOutDate) {
         throw new Error("All search parameters must be provided");
+      }
+      if (!token) {
+        throw new Error("Authorization token is missing");
       }
 
       const result = await hotelService.searchHotels(

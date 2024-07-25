@@ -3,6 +3,7 @@ import axios from 'axios';
 const API_KEY = import.meta.env.VITE_API_URL || `http://localhost:5000/api/accommodations`;
 
 const searchHotels = async (city, checkInDate, checkOutDate, token) => {
+  console.log("Using token:", token);
   if (!city || !checkInDate || !checkOutDate) {
     throw new Error('All search parameters must be provided');
   }
