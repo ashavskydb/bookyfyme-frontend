@@ -22,7 +22,7 @@ const HotelSearch = () => {
         throw new Error("Authorization token is missing");
       }
 
-      const result = await hotelService.searchHotels(
+      const result = await hotelService.searchAccommodations(
         city,
         checkInDate,
         checkOutDate,
