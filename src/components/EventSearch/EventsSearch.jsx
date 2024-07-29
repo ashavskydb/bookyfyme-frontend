@@ -155,36 +155,35 @@ const handleSubmit = async (e) => {
   }
 };
 
-  return (
-    <div className="event-search-wrapper">
-        <h2 className="search-title">Search Events by Bandsintown</h2>
-        <div className="event-search-container">
-            <form onSubmit={handleSubmit} className="event-search-form">
-                <label>
-                    City:
-                    <select value={city} onChange={(e) => setCity(e.target.value)} required>
-                        <option value="">Select a city</option>
-                        {cities.map((city, index) => (
-                            <option key={index} value={city.code}>
-                                {city.name}
-                            </option>
-                        ))}
-                    </select>
-                </label>
-                <label>
-                    Date:
-                    <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
-                </label>
-                <button type="submit" className="btn btn-white btn-animate">Search</button>
-            </form>
-            <ul className="event-results">
-                {events.map((event, index) => (
-                    <li key={index}>{event.name} - {event.date}</li>
-                ))}
-            </ul>
+return (
+        <div className="event-search-wrapper">
+            <h2 className="search-title">Search Events by Bandsintown</h2>
+            <div className="event-search-container">
+                <form onSubmit={handleSubmit} className="event-search-form">
+                    <label>
+                        City:
+                        <input
+                            type="text"
+                            value={city}
+                            onChange={(e) => setCity(e.target.value)}
+                            placeholder="Enter city"
+                            required
+                        />
+                    </label>
+                    <label>
+                        Date:
+                        <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+                    </label>
+                    <button type="submit" className="btn btn-white btn-animate">Search</button>
+                </form>
+                <ul className="event-results">
+                    {events.map((event, index) => (
+                        <li key={index}>{event.name} - {event.date}</li>
+                    ))}
+                </ul>
+            </div>
         </div>
-    </div>
-);
+    );
 };
 
 export default EventSearch;
