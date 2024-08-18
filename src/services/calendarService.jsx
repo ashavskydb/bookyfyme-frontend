@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/calendars';
+const API_URL = 'https://bookyfyme-backend.onrender.com/api/calendars';
 
 const getEvents = async () => {
   const response = await axios.get(`${API_URL}`);
