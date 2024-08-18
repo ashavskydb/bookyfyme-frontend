@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = import.meta.env.VITE_API_URL || `http://localhost:5000/api/accommodations`;
+const API_KEY = import.meta.env.VITE_API_URL || `https://bookyfyme-backend.onrender.com/api/accommodations`;
 
 const searchAccommodations = async (city, checkInDate, checkOutDate, token) => {
   console.log("Using token:", token);
