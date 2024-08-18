@@ -15,7 +15,6 @@ const Navbar = () => {
         <li><Link to="/flights" className="btn btn-white btn-animate">Flights</Link></li>
         <li><Link to="/hotels" className="btn btn-white btn-animate">Hotels</Link></li>
         <li><Link to="/events" className="btn btn-white btn-animate">Events</Link></li>
-        <li><Link to="/calendar" className="btn btn-white btn-animate">Calendar</Link></li>
         <li><Link to="/login" className="btn btn-white btn-animate">Login</Link></li>
         <li><Link to="/register" className="btn btn-white btn-animate">Register</Link></li>
       </ul>
