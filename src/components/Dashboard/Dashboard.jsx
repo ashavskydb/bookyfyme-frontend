@@ -11,7 +11,7 @@ const Dashboard = () => {
       <div className="dashboard">
         <Calendar />
       </div>
-      <div className="sidebar">
+{/*       <div className="sidebar">
         <div className="widget">
           <h2>Search Flights</h2>
           <Link to="/flights">Go to Flight Search</Link>
@@ -24,7 +24,7 @@ const Dashboard = () => {
           <h2>Search Events</h2>
           <Link to="/events">Go to Event Search</Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
