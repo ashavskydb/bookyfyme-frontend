@@ -17,7 +17,7 @@ const HotelSearch = () => {
         throw new Error("All search parameters must be provided");
       }
 
-      const result = await hotelService.search_Accommodations(city, checkInDate, checkOutDate);
+      const result = await hotelService.searchAccommodations(city, checkInDate, checkOutDate);
       setHotels(result);
       setError(null);
     } catch (error) {
