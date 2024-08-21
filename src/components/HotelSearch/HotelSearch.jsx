@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import hotelService from "../../services/hotelService";
 import "./HotelSearch.css";
 
@@ -18,6 +18,7 @@ const HotelSearch = () => {
       }
 
       const result = await hotelService.searchAccommodations(city, checkInDate, checkOutDate);
+      console.log('hotels=>', result);
       setHotels(result);
       setError(null);
     } catch (error) {
@@ -66,7 +67,7 @@ const HotelSearch = () => {
       <ul className="hotel-results">
         {hotels.map((hotel, index) => (
           <li key={index}>
-            {hotel.name} - {hotel.rate_per_night.low} {hotel.currency}
+            {hotel.name} - {hotel.check_in_time} {hotel.check_out_time} {hotel.hotel_class}
           </li>
         ))}
       </ul>
