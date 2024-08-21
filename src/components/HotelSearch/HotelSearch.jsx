@@ -1,10 +1,8 @@
 import React, { useState, useContext } from "react";
 import hotelService from "../../services/hotelService";
 import "./HotelSearch.css";
-import { AuthContext } from "../../contexts/AuthContext";
 
 const HotelSearch = () => {
-  const { token } = useContext(AuthContext);
   const [city, setCity] = useState("");
   const [checkInDate, setCheckInDate] = useState("");
   const [checkOutDate, setCheckOutDate] = useState("");
@@ -18,20 +16,11 @@ const HotelSearch = () => {
       if (!city || !checkInDate || !checkOutDate) {
         throw new Error("All search parameters must be provided");
       }
-      if (!token) {
-        throw new Error("Authorization token is missing");
-      }
 
-      const result = await hotelService.searchAccommodations(
-        city,
-        checkInDate,
-        checkOutDate,
-        token,
-      );
+      const result = await hotelService.searchAccommodations(city, checkInDate, checkOutDate);
       setHotels(result);
       setError(null);
     } catch (error) {
-      // console.error("Hotel search failed", error.message);
       setError(error.message);
     }
   };
