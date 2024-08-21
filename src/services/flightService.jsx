@@ -1,14 +1,26 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://bookyfyme-backend.onrender.com/api/flights';
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5001/api/flights"; 'https://bookyfyme-backend.onrender.com/api/flights';
 
-const searchFlights = async (origin, destination, departureDate, returnDate) => {
-  const response = await axios.post(`${API_URL}/search`, { origin, destination, departureDate, returnDate });
+const searchFlights = async (
+  origin,
+  destination,
+  departureDate,
+  returnDate
+) => {
+  const response = await axios.post(`${API_URL}/search`, {
+    origin,
+    destination,
+    departureDate,
+    returnDate,
+  });
   return response.data;
 };
 
 const flightService = {
-  searchFlights
+  searchFlights,
 };
 
 export default flightService;
+
